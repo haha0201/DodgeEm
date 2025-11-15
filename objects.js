@@ -314,32 +314,32 @@ sniper3.prototype.update = function(dt){
     this.canshoot = true;
     this.reloadtime = 300;
     this.canshootback = false;
-    this.speed = 8;
+    this.speed = 7.5;
     }
     else if (survived < 70){
     this.canshoot = true;
     this.reloadtime = 50;
     this.canshootback = false;
-    this.speed = 15;
+    this.speed = 9;
     }
     else if (survived < 90){}
     else if (survived < 100){
     this.canshoot = true;
     this.reloadtime = 200;
     this.canshootback = true;
-    this.speed = 10;
+    this.speed = 7;
     }
     else if (survived < 120){
     this.canshoot = true;
     this.reloadtime = 500;
     this.canshootback = false;
-    this.speed = 20;
+    this.speed = 6;
     }
     else if (survived < 126){
     this.canshoot = true;
     this.reloadtime = 0;
     this.canshootback = false;
-    this.speed = 20;
+    this.speed = 6;
     }
     
     if (this.canshoot === true){
