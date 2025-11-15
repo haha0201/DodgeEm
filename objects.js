@@ -163,9 +163,12 @@ sniper.prototype.update = function(dt){
 }
 sniper.prototype.draw = function(){
   ctx.fillStyle = "rgb(200, 50, 50)";
+  ctx.strokeStyle = "black";
   ctx.beginPath();
   ctx.arc(this.x, this.y, this.s, 0, Math.PI * 2);
   ctx.fill();
+  ctx.stroke();
+  ctx.closePath();
 }
 
 var sniper2 = function(x, y, s){
@@ -270,9 +273,12 @@ sniper2.prototype.update = function(dt){
 }
 sniper2.prototype.draw = function(){
   ctx.fillStyle = "rgb(200, 50, 50)";
+  ctx.strokeStyle = "black"
   ctx.beginPath();
   ctx.arc(this.x, this.y, this.s, 0, Math.PI * 2);
   ctx.fill();
+  ctx.stroke();
+  ctx.closePath();
 }
 
 
@@ -370,9 +376,12 @@ sniper3.prototype.update = function(dt){
 }
 sniper3.prototype.draw = function(){
   ctx.fillStyle = "rgb(200, 50, 50)";
+  ctx.strokeStyle = "black"
   ctx.beginPath();
   ctx.arc(this.x, this.y, this.s, 0, Math.PI * 2);
   ctx.fill();
+  ctx.stroke();
+  ctx.closePath();
 }
 
 
@@ -405,9 +414,12 @@ bullet.prototype.update = function(dt){
 }
 bullet.prototype.draw = function(){
   ctx.fillStyle = "rgb(200, 50, 50)";
+  ctx.strokeStyle = "black"
   ctx.beginPath();
   ctx.arc(this.x, this.y, this.s, 0, Math.PI * 2);
   ctx.fill();
+  ctx.stroke();
+  ctx.closePath();
 }
 var enemy = function(s, speed, life){
   this.wall = Math.floor(Math.random() * 4)+1;
@@ -491,9 +503,12 @@ enemy.prototype.update = function(dt){
 }
 enemy.prototype.draw = function(){
   ctx.fillStyle = "rgb(100, 100, 100)";
+  ctx.strokeStyle = "black"
   ctx.beginPath();
   ctx.arc(this.x, this.y, this.s, 0, Math.PI * 2);
   ctx.fill();
+  ctx.stroke();
+  ctx.closePath();
 }
 
 
