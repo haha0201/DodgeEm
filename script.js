@@ -696,7 +696,7 @@ if (survived > 115 && spawnPhaseBruh === 8){
     if (survived >= 54 && spawnPhase === 3){
       spawnPhase = 4;
       for (var i = 32; i--; i>0){
-        enemies.push(new enemy(15, 5.5, 69));
+        enemies.push(new enemy(15, 7.5, 69));
       }
     }
     if (survived >= 90 && spawnPhase === 4){
@@ -705,34 +705,34 @@ if (survived > 115 && spawnPhaseBruh === 8){
         enemies.push(new enemy(20, 8, 100));
       }
     }
-    if (survived >= 100 && spawnPhase === 5){
+    if (survived >= 102 && spawnPhase === 5){
       spawnPhase = 6;
       for (var i = 20; i--; i>0){
         enemies.push(new enemy(20, 6, 126));
       }
     }
-    if (survived >= 105 && spawnPhase === 6){
+    if (survived >= 106 && spawnPhase === 6){
       spawnPhase = 7;
       for (var i = 10; i--; i>0){
         enemies.push(new enemy(30, 3, 126));
       }
     }
-    if (survived >= 115 && spawnPhase === 7){
+    if (survived >= 111 && spawnPhase === 7){
       spawnPhase = 8;
-      for (var i = 12; i--; i>0){
-        enemies.push(new enemy(30, 11, 126));
+      for (var i = 7; i--; i>0){
+        enemies.push(new enemy(24, 7, 126));
       }
     }
-    if (survived >= 120 && spawnPhase === 8){
+    if (survived >= 117 && spawnPhase === 8){
       spawnPhase = 9;
-      for (var i = 10; i--; i>0){
-        enemies.push(new enemy(40, 13, 126));
+      for (var i = 7; i--; i>0){
+        enemies.push(new enemy(16, 10, 126));
       }
     }
     if (survived >= 121 && spawnPhase === 9){
       spawnPhase = 10;
-      for (var i = 10; i--; i>0){
-        enemies.push(new enemy(50, 15, 126));
+      for (var i = 7; i--; i>0){
+        enemies.push(new enemy(20, 12, 126));
       }
     }
     
