@@ -88,12 +88,15 @@ sniper.prototype.update = function(dt){
     } else{
       if (survived < 28){
       this.reloadtime = 210;
+      if (this.mode == "Practice Unreal" || this.mode == "Normal Unreal" || this.mode == "Extreme Unreal") this.reloadtime *= 1.35;
       }
       else if (survived < 40){
       this.reloadtime = 290;
+      if (this.mode == "Practice Unreal" || this.mode == "Normal Unreal" || this.mode == "Extreme Unreal") this.reloadtime *= 1.4;
       }
       else if (survived < 50){
       this.reloadtime = 170;
+      if (this.mode == "Practice Unreal" || this.mode == "Normal Unreal" || this.mode == "Extreme Unreal") this.reloadtime *= 1.4;
       }
       else if (survived < 69){
       this.reloadtime = 400;
@@ -104,6 +107,7 @@ sniper.prototype.update = function(dt){
           }
           else{
         this.reloadtime = 360;
+      if (this.mode == "Practice Unreal" || this.mode == "Normal Unreal" || this.mode == "Extreme Unreal") this.reloadtime *= 1.2;
           }
         this.speed = 6.5;
         }
@@ -153,7 +157,7 @@ sniper.prototype.update = function(dt){
       Math.pow(this.y-playerY, 2)
     )
   ) < this.s + 20){
-    if (mode === "Extreme" || mode === "Extreme Hard" || mode === "Extreme Insane"){
+    if (mode === "Extreme" || mode === "Extreme Hard" || mode === "Extreme Insane" || mode === "Extreme Unreal"){
     cs = 3;
     }
     else{
@@ -215,32 +219,32 @@ sniper2.prototype.update = function(dt){
       this.canshoot = false;
     this.reloadtime = 1200;
     if (this.x < 800){
-      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0));
-      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, -0.4));
-      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, -0.8));
-      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0.4));
-      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0.8));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0, "rgb(200, 105, 50)"));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, -0.4, "rgb(200, 105, 50)"));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, -0.8, "rgb(200, 105, 50)"));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0.4, "rgb(200, 105, 50)"));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0.8, "rgb(200, 105, 50)"));
     }
     else if (this.y < 450){
-      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0+Math.PI/2));
-      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, -0.40+Math.PI/2));
-      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, -0.80+Math.PI/2));
-      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0.40+Math.PI/2));
-      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0.80+Math.PI/2));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0+Math.PI/2, "rgb(200, 105, 50)"));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, -0.40+Math.PI/2, "rgb(200, 105, 50)"));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, -0.80+Math.PI/2, "rgb(200, 105, 50)"));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0.40+Math.PI/2, "rgb(200, 105, 50)"));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0.80+Math.PI/2, "rgb(200, 105, 50)"));
     }
     else if (this.y > 450){
-      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0-Math.PI/2));
-      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, -0.40-Math.PI/2));
-      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, -0.80-Math.PI/2));
-      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0.40-Math.PI/2));
-      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0.80-Math.PI/2));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0-Math.PI/2,"rgb(200, 105, 50)"));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, -0.40-Math.PI/2, "rgb(200, 105, 50)"));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, -0.80-Math.PI/2, "rgb(200, 105, 50)"));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0.40-Math.PI/2, "rgb(200, 105, 50)"));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0.80-Math.PI/2, "rgb(200, 105, 50)"));
     }
     else{
-      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0+Math.PI));
-      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, -0.4+Math.PI));
-      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, -0.8+Math.PI));
-      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0.4+Math.PI));
-      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0.8+Math.PI));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0+Math.PI, "rgb(200, 105, 50)"));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, -0.4+Math.PI, "rgb(200, 105, 50)"));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, -0.8+Math.PI, "rgb(200, 105, 50)"));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0.4+Math.PI, "rgb(200, 105, 50)"));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, 4.5, 0.8+Math.PI, "rgb(200, 105, 50)"));
     }
     
     } else{
@@ -249,7 +253,7 @@ sniper2.prototype.update = function(dt){
       this.speed = 4.5;
     }
     if (this.canshoot === true){
-    enemies.push(new bullet(this.x, this.y, this.s*5/12, this.speed, this.rot));
+    enemies.push(new bullet(this.x, this.y, this.s*5/12, this.speed, this.rot, "rgb(200, 105, 50)"));
     }
   } 
 
@@ -263,7 +267,7 @@ sniper2.prototype.update = function(dt){
       Math.pow(this.y-playerY, 2)
     )
   ) < this.s + 20){
-    if (mode === "Extreme" || mode === "Extreme Hard"  || mode === "Extreme Insane"){
+    if (mode === "Extreme" || mode === "Extreme Hard"  || mode === "Extreme Insane" || mode === "Extreme Unreal"){
     cs = 3;
     }
     else{
@@ -272,7 +276,7 @@ sniper2.prototype.update = function(dt){
   }
 }
 sniper2.prototype.draw = function(){
-  ctx.fillStyle = "rgb(200, 50, 50)";
+  ctx.fillStyle = "rgb(200, 105, 50)";
   ctx.strokeStyle = "black"
   ctx.beginPath();
   ctx.arc(this.x, this.y, this.s, 0, Math.PI * 2);
@@ -321,12 +325,15 @@ sniper3.prototype.update = function(dt){
     this.reloadtime = 300;
     this.canshootback = false;
     this.speed = 7.5;
+    
+    if (mode == "Normal Unreal" || mode == "Practice Unreal" || mode == "Extreme Unreal"){this.reloadtime = 450; this.speed = 6.5;}
     }
     else if (survived < 70){
     this.canshoot = true;
     this.reloadtime = 50;
     this.canshootback = false;
     this.speed = 9;
+    if (mode == "Normal Unreal" || mode == "Practice Unreal" || mode == "Extreme Unreal"){this.reloadtime = 350; this.speed = 7.5;}
     }
     else if (survived < 90){}
     else if (survived < 100){
@@ -334,24 +341,27 @@ sniper3.prototype.update = function(dt){
     this.reloadtime = 200;
     this.canshootback = true;
     this.speed = 7;
+    if (mode == "Normal Unreal" || mode == "Practice Unreal" || mode == "Extreme Unreal"){this.reloadtime = 500; this.speed = 6;}
     }
     else if (survived < 120){
     this.canshoot = true;
     this.reloadtime = 500;
     this.canshootback = false;
     this.speed = 6;
+    if (mode == "Normal Unreal" || mode == "Practice Unreal" || mode == "Extreme Unreal") this.reloadtime = 600;
     }
     else if (survived < 126){
     this.canshoot = true;
     this.reloadtime = 0;
     this.canshootback = false;
     this.speed = 6;
+    if (mode == "Normal Unreal" || mode == "Practice Unreal" || mode == "Extreme Unreal") this.speed = 5;
     }
     
     if (this.canshoot === true){
-    enemies.push(new bullet(this.x, this.y, this.s*5/12, this.speed, this.rot));
+    enemies.push(new bullet(this.x, this.y, this.s*5/12, this.speed, this.rot, "rgb(211, 71, 104)"));
     if (this.canshootback === true){
-    enemies.push(new bullet(this.x, this.y, this.s*5/12, this.speed, this.rot+Math.PI));
+    enemies.push(new bullet(this.x, this.y, this.s*5/12, this.speed, this.rot+Math.PI, "rgb(211, 71, 104)"));
     }
     }
   } 
@@ -366,7 +376,7 @@ sniper3.prototype.update = function(dt){
       Math.pow(this.y-playerY, 2)
     )
   ) < this.s + 20){
-    if (mode === "Extreme" || mode === "Extreme Hard"  || mode === "Extreme Insane"){
+    if (mode === "Extreme" || mode === "Extreme Hard"  || mode === "Extreme Insane" || mode === "Extreme Unreal"){
     cs = 3;
     }
     else{
@@ -375,7 +385,7 @@ sniper3.prototype.update = function(dt){
   }
 }
 sniper3.prototype.draw = function(){
-  ctx.fillStyle = "rgb(200, 50, 50)";
+  ctx.fillStyle = "rgb(211, 71, 104)";
   ctx.strokeStyle = "black"
   ctx.beginPath();
   ctx.arc(this.x, this.y, this.s, 0, Math.PI * 2);
@@ -384,13 +394,171 @@ sniper3.prototype.draw = function(){
   ctx.closePath();
 }
 
+var sniper4 = function(x, y, s){
+  this.x = x;
+  this.y = y;
+  this.s = s;
+  this.reloadtime = 1000;
+  this.rot = 0;
+  this.phase = 0;
+  this.speed = 10;
+}
+sniper4.prototype.update = function(dt){
+  this.reloadtime -= dt;
 
-var bullet = function(x, y, s, speed, dir){
+  //CONTROL ROTATION
+  if ((survived > 10 && survived < 40) || (survived > 60 && survived < 80)){
+    this.rot = Math.atan2(playerY-this.y, playerX-this.x);
+  }
+  else{
+    this.rot = Math.atan2(450-this.y, 800-this.x);
+  }
+
+
+  //CONTROL SHOOTING
+  if (this.reloadtime < 0){
+
+    //enemies.push(new bullet(this.x, this.y, this.s*5/12, this.speed, this.rot, "rgb(44, 126, 190)"));
+
+    if (survived < 10){
+      enemies.push(new bullet(this.x, this.y, this.s*7/12, this.speed, this.rot + Math.cos(time / 100), "rgb(44, 126, 190)"));
+      enemies.push(new bullet(this.x, this.y, this.s*5.5/12, this.speed / 1.2, this.rot + Math.sin(time / 100), "rgb(44, 126, 190)"));
+    }
+    else if (survived < 20){
+      enemies.push(new bullet(this.x, this.y, this.s*7/12, this.speed, this.rot + 0.8 * Math.cos(time / 100), "rgb(44, 126, 190)"));
+      enemies.push(new bullet(this.x, this.y, this.s*7/12, this.speed, this.rot - 0.8 * Math.sin(time / 100), "rgb(44, 126, 190)"));
+    }
+    else if (survived < 30){
+      enemies.push(new bullet(this.x, this.y, this.s*7/12, this.speed, this.rot + Math.cos(time / 500), "rgb(44, 126, 190)"));
+    }
+    else if (survived < 40){
+      enemies.push(new bullet(this.x, this.y, this.s*7/12, this.speed, this.rot + Math.cos(time / 500), "rgb(44, 126, 190)"));
+      enemies.push(new bullet(this.x, this.y, this.s*6/12, this.speed, this.rot + Math.cos(time / 500 + Math.PI/4), "rgb(44, 126, 190)"));
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, this.speed, this.rot + Math.cos(time / 500 + 2 * Math.PI/4), "rgb(44, 126, 190)"));
+      enemies.push(new bullet(this.x, this.y, this.s*4/12, this.speed, this.rot + Math.cos(time / 500 + 3 * Math.PI/4), "rgb(44, 126, 190)"));
+    }
+    else if (survived < 50){
+      enemies.push(new bullet(this.x, this.y, this.s*9/12, this.speed, this.rot, "rgb(44, 126, 190)"));
+    }
+    else if (survived < 60){
+      enemies.push(new bullet(this.x, this.y, this.s*9/12, this.speed + Math.cos(time / 200) * 3, this.rot + Math.cos(time / 200), "rgb(44, 126, 190)"));
+    }
+    else if (survived < 70){
+      enemies.push(new bullet(this.x, this.y, this.s*7/12, this.speed + Math.cos(time / 200) * 2, this.rot + Math.cos(time / 100) / 3, "rgb(44, 126, 190)"));
+    }
+    else if (survived < 80){
+      enemies.push(new bullet(this.x, this.y, this.s*7/12, this.speed, this.rot + 0.25, "rgb(44, 126, 190)"));
+      enemies.push(new bullet(this.x, this.y, this.s*7/12, this.speed, this.rot - 0.25, "rgb(44, 126, 190)"));
+    }
+    else if (survived < 100){
+      enemies.push(new bullet(this.x, this.y, this.s*8/12, this.speed, this.rot, "rgb(44, 126, 190)"));
+      enemies.push(new bullet(this.x, this.y, this.s*7/12, this.speed * 0.9, this.rot + 0.25, "rgb(44, 126, 190)"));
+      enemies.push(new bullet(this.x, this.y, this.s*7/12, this.speed * 0.9, this.rot - 0.25, "rgb(44, 126, 190)"));
+      enemies.push(new bullet(this.x, this.y, this.s*6/12, this.speed * 0.8, this.rot + 0.5, "rgb(44, 126, 190)"));
+      enemies.push(new bullet(this.x, this.y, this.s*6/12, this.speed * 0.8, this.rot - 0.5, "rgb(44, 126, 190)"));
+      
+    }
+    else if (survived < 110){
+      enemies.push(new bullet(this.x, this.y, this.s*5/12, this.speed, this.rot + Math.cos(time / 500) * 0.8, "rgb(44, 126, 190)"));
+    }
+    else if (survived < 120){
+      enemies.push(new bullet(this.x, this.y, this.s*7/12, this.speed + Math.cos(time / 1000) * 1.5, this.rot + Math.cos(time / 500) * 0.8, "rgb(44, 126, 190)"));
+    }
+    else if (survived < 125){
+      enemies.push(new bullet(this.x, this.y, this.s*11/12, this.speed + Math.cos(time / 500) * 1.5, this.rot + Math.cos(time / 200) * 0.8, "rgb(44, 126, 190)"));
+    }
+    
+
+    if (survived < 5){
+      this.reloadtime = 250;
+      this.speed = 7;
+    }
+    else if (survived < 10){
+      this.reloadtime = 350;
+      this.speed = 8;
+    }
+    else if (survived < 20){
+      this.reloadtime = 500;
+      this.speed = 7;
+    }
+    else if (survived < 30){
+      this.reloadtime = 300;
+      this.speed = 9;
+    }
+    else if (survived < 40){
+      this.reloadtime = 900;
+      this.speed = 6;
+    }
+    else if (survived < 50){
+      this.reloadtime = 1200;
+      this.speed = 9;
+    }
+    else if (survived < 53){
+      this.reloadtime = 2000;
+      this.speed = 9;
+    }
+    else if (survived < 60){
+      this.reloadtime = 100;
+      this.speed = 9.5;
+    }
+    else if (survived < 70){
+      this.reloadtime = 250;
+      this.speed = 6;
+    }
+    else if (survived < 80){
+      this.reloadtime = 800;
+      this.speed = 5;
+    }
+    else if (survived < 90){
+      this.reloadtime = 2000;
+      this.speed = 6;
+    }
+    else if (survived < 100){
+      this.reloadtime = 3000;
+      this.speed = 5.5;
+    }
+    else if (survived < 120){
+      this.reloadtime = 300;
+      this.speed = 7;
+    }
+    else if (survived < 125){
+      this.reloadtime = 250;
+      this.speed = 8;
+    }
+    
+  } 
+  if (Math.sqrt(
+    Math.abs(
+      Math.pow(this.x-playerX, 2) +
+      Math.pow(this.y-playerY, 2)
+    )
+  ) < this.s + 20){
+    if (mode === "Extreme" || mode === "Extreme Hard" || mode === "Extreme Insane" || mode === "Extreme Unreal"){
+    cs = 3;
+    }
+    else{
+    life -= dt;
+    }
+  }
+}
+sniper4.prototype.draw = function(){
+  ctx.fillStyle = "rgb(44, 126, 190)";
+  ctx.strokeStyle = "black";
+  ctx.beginPath();
+  ctx.arc(this.x, this.y, this.s, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.stroke();
+  ctx.closePath();
+}
+
+
+var bullet = function(x, y, s, speed, dir, color){
   this.x = x;
   this.y = y;
   this.s = s;
   this.speed = speed;
   this.dir = dir;
+  this.color = color || "rgb(200, 50, 50)"
 }
 bullet.prototype.update = function(dt){
   this.x += Math.cos(this.dir) * this.speed * dt * 1/16;
@@ -404,7 +572,7 @@ bullet.prototype.update = function(dt){
       Math.pow(this.y-playerY, 2)
     )
   ) < this.s + 20){
-    if (mode === "Extreme"  || mode === "Extreme Hard" || mode === "Extreme Insane"){
+    if (mode === "Extreme"  || mode === "Extreme Hard" || mode === "Extreme Insane" || mode === "Extreme Unreal"){
     cs = 3;
     }
     else{
@@ -413,7 +581,7 @@ bullet.prototype.update = function(dt){
   }
 }
 bullet.prototype.draw = function(){
-  ctx.fillStyle = "rgb(200, 50, 50)";
+  ctx.fillStyle = this.color;
   ctx.strokeStyle = "black"
   ctx.beginPath();
   ctx.arc(this.x, this.y, this.s, 0, Math.PI * 2);
@@ -456,7 +624,7 @@ enemy.prototype.update = function(dt){
       Math.pow(this.y-playerY, 2)
     )
   ) < this.s + 20){
-    if (mode === "Extreme"  || mode === "Extreme Hard"  || mode === "Extreme Insane"){
+    if (mode === "Extreme"  || mode === "Extreme Hard"  || mode === "Extreme Insane" || mode === "Extreme Unreal"){
     cs = 3;
     }
     else{

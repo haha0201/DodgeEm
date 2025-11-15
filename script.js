@@ -200,6 +200,39 @@ function menu(dt){
   }
   }
 
+  ctx.fillStyle = "rgb(0, 0, 0)";
+  ctx.fillRect(350+5, 550+5, 300, 100)
+  ctx.fillStyle = "rgb(0, 50, 50)";
+  if (mouseX < 350 || mouseY < 550 || mouseX > 350+300 || mouseY > 550+100){
+  ctx.fillRect(350-5, 550-5, 300, 100)
+    ctx.fillStyle = "rgba(44, 108, 138)";
+  textFont(50);
+  ctx.fillText("Practice", 500, 612)
+  }
+  else{
+  ctx.fillRect(350, 550, 300, 100)
+    ctx.fillStyle = "rgba(44, 108, 138)";
+  textFont(50);
+  ctx.fillText("Practice", 505, 617)
+  if (clicked === true){
+    cs = 2;
+    mode = "Practice Unreal";
+    life = 20067;
+    enemies.push(new sniper2(50, 450, 30))
+    enemies.push(new sniper2(1600-50, 450, 30))
+    enemies.push(new sniper2(800, 50, 30))
+    enemies.push(new sniper2(800, 900-50, 30))
+    enemies.push(new sniper3(800, 450, 80))
+    enemies.push(new sniper4(40, 40, 25))
+    enemies.push(new sniper4(1560, 40, 25))
+    enemies.push(new sniper4(1560, 860, 25))
+    enemies.push(new sniper4(40, 860, 25))
+    
+    playerX = 1200;
+    playerY = (450+900)/2;
+  }
+  }
+
 
 
 
@@ -278,6 +311,38 @@ function menu(dt){
     playerY = (450+900)/2;
   }
   }
+ ctx.fillStyle = "rgb(0, 0, 0)";
+  ctx.fillRect(650+5, 550+5, 300, 100)
+  ctx.fillStyle = "rgb(0, 50, 50)";
+  if (mouseX < 650 || mouseY < 550 || mouseX > 650+300 || mouseY > 550+100){
+  ctx.fillRect(650-5, 550-5, 300, 100)
+    ctx.fillStyle = "rgb(23, 84, 113)";
+  textFont(50);
+  ctx.fillText("Normal", 800, 612)
+  }
+  else{
+  ctx.fillRect(650,550, 300, 100)
+    ctx.fillStyle = "rgb(23, 84, 113)";
+  textFont(50);
+  ctx.fillText("Normal", 805, 617)
+  if (clicked === true){
+    cs = 2;
+    mode = "Normal Unreal";
+    life = 1000;
+    enemies.push(new sniper2(50, 450, 30))
+    enemies.push(new sniper2(1600-50, 450, 30))
+    enemies.push(new sniper2(800, 50, 30))
+    enemies.push(new sniper2(800, 900-50, 30))
+    enemies.push(new sniper3(800, 450, 80))
+    enemies.push(new sniper4(40, 40, 25))
+    enemies.push(new sniper4(1560, 40, 25))
+    enemies.push(new sniper4(1560, 860, 25))
+    enemies.push(new sniper4(40, 860, 25))
+    playerX = 1200;
+    playerY = (450+900)/2;
+  }
+  }
+
 
 
 
@@ -357,21 +422,52 @@ ctx.fillStyle = "rgb(0, 0, 0)";
   }
   }
   
-
-ctx.fillStyle = "rgb(0, 0, 0)";
-  ctx.fillRect(350+5, 550+5, 300, 100)
+  ctx.fillStyle = "rgb(0, 0, 0)";
+  ctx.fillRect(950+5, 550+5, 300, 100)
   ctx.fillStyle = "rgb(0, 50, 50)";
-  if (mouseX < 350 || mouseY < 550 || mouseX > 350+300 || mouseY > 550+100){
-  ctx.fillRect(350-5, 550-5, 300, 100)
-    ctx.fillStyle = "rgb(168, 168, 168)";
+  if (mouseX < 950 || mouseY < 550 || mouseX > 950+300 || mouseY > 550+100){
+  ctx.fillRect(950-5, 550-5, 300, 100)
+    ctx.fillStyle = "rgb(4, 31, 71)";
   textFont(50);
-  ctx.fillText("Infinite", 500, 612)
+  ctx.fillText("Extreme", 1100, 612)
   }
   else{
-  ctx.fillRect(350,550, 300, 100)
+  ctx.fillRect(950,550, 300, 100)
+    ctx.fillStyle = "rgb(4, 31, 71)";
+  textFont(50);
+  ctx.fillText("Extreme", 1105, 617)
+  if (clicked === true){
+    cs = 2;
+    mode = "Extreme Unreal";
+    life = 1;
+    enemies.push(new sniper2(50, 450, 30))
+    enemies.push(new sniper2(1600-50, 450, 30))
+    enemies.push(new sniper2(800, 50, 30))
+    enemies.push(new sniper2(800, 900-50, 30))
+    enemies.push(new sniper3(800, 450, 80))
+    enemies.push(new sniper4(40, 40, 25))
+    enemies.push(new sniper4(1560, 40, 25))
+    enemies.push(new sniper4(1560, 860, 25))
+    enemies.push(new sniper4(40, 860, 25))
+    playerX = 1200;
+    playerY = (450+900)/2;
+  }
+  }
+
+ctx.fillStyle = "rgb(0, 0, 0)";
+  ctx.fillRect(350+5, 650+5, 300, 100)
+  ctx.fillStyle = "rgb(0, 50, 50)";
+  if (mouseX < 350 || mouseY < 650 || mouseX > 350+300 || mouseY > 650+100){
+  ctx.fillRect(350-5, 650-5, 300, 100)
     ctx.fillStyle = "rgb(168, 168, 168)";
   textFont(50);
-  ctx.fillText("Infinite", 505, 617)
+  ctx.fillText("Infinite", 500, 712)
+  }
+  else{
+  ctx.fillRect(350,650, 300, 100)
+    ctx.fillStyle = "rgb(168, 168, 168)";
+  textFont(50);
+  ctx.fillText("Infinite", 505, 717)
   if (clicked === true){
     cs = 2;
     mode = "Infinite Easy";
@@ -380,19 +476,19 @@ ctx.fillStyle = "rgb(0, 0, 0)";
   }
   
 ctx.fillStyle = "rgb(0, 0, 0)";
-  ctx.fillRect(650+5, 550+5, 300, 100)
+  ctx.fillRect(650+5, 650+5, 300, 100)
   ctx.fillStyle = "rgb(0, 50, 50)";
-  if (mouseX < 650 || mouseY < 550 || mouseX > 650+300 || mouseY > 550+100){
-  ctx.fillRect(650-5, 550-5, 300, 100)
+  if (mouseX < 650 || mouseY < 650 || mouseX > 650+300 || mouseY > 650+100){
+  ctx.fillRect(650-5, 650-5, 300, 100)
     ctx.fillStyle = "rgb(117, 117, 117)";
   textFont(50);
-  ctx.fillText("Infinite", 800, 612)
+  ctx.fillText("Infinite", 800, 712)
   }
   else{
-  ctx.fillRect(650,550, 300, 100)
+  ctx.fillRect(650,650, 300, 100)
     ctx.fillStyle = "rgb(117, 117, 117)";
   textFont(50);
-  ctx.fillText("Infinite", 805, 617)
+  ctx.fillText("Infinite", 805, 717)
   if (clicked === true){
     cs = 2;
     mode = "Infinite";
@@ -401,19 +497,19 @@ ctx.fillStyle = "rgb(0, 0, 0)";
   }
 
 ctx.fillStyle = "rgb(10, 0, 0)";
-  ctx.fillRect(950+5, 550+5, 300, 100)
+  ctx.fillRect(950+5, 650+5, 300, 100)
   ctx.fillStyle = "rgb(10, 50, 50)";
-  if (mouseX < 950 || mouseY < 550 || mouseX > 950+300 || mouseY > 550+100){
-  ctx.fillRect(950-5, 550-5, 300, 100)
+  if (mouseX < 950 || mouseY < 650 || mouseX > 950+300 || mouseY > 650+100){
+  ctx.fillRect(950-5, 650-5, 300, 100)
     ctx.fillStyle = "rgb(74, 74, 74)";
   textFont(50);
-  ctx.fillText("Infinite", 1100, 612)
+  ctx.fillText("Infinite", 1100, 712)
   }
   else{
-  ctx.fillRect(950,550, 300, 100)
+  ctx.fillRect(950,650, 300, 100)
     ctx.fillStyle = "rgb(74, 74, 74)";
   textFont(50);
-  ctx.fillText("Infinite", 1105, 617)
+  ctx.fillText("Infinite", 1105, 717)
   if (clicked === true){
     cs = 2;
     mode = "Infinite Hard";
@@ -674,7 +770,7 @@ if (survived > 115 && spawnPhaseBruh === 8){
   }
   
   }
-  else{
+  else if (mode == "Normal Insane" || mode == "Practice Insane" || mode == "Extreme Insane"){
     if (survived >= 10 && spawnPhase === 0){
       spawnPhase = 1;
       for (var i = 12; i--; i>0){
@@ -738,6 +834,64 @@ if (survived > 115 && spawnPhaseBruh === 8){
     
     
   }
+  else{
+    if (survived >= 10 && spawnPhase === 0){
+      spawnPhase = 1;
+      for (var i = 7; i--; i>0){
+        enemies.push(new enemy(20, 5, 19));
+      }
+    }
+    if (survived >= 12 && spawnPhase === 1){
+      spawnPhase = 2;
+      for (var i = 7; i--; i>0){
+        enemies.push(new enemy(17, 6, 19));
+      }
+    }
+    if (survived >= 14 && spawnPhase === 2){
+      spawnPhase = 3;
+      for (var i = 7; i--; i>0){
+        enemies.push(new enemy(14, 7, 19));
+      }
+    }
+    if (survived >= 30 && spawnPhase === 3){
+      spawnPhase = 4;
+      for (var i = 7; i--; i>0){
+        enemies.push(new enemy(15, 5.5, 38));
+      }
+    }
+    if (survived >= 50 && spawnPhase === 4){
+      spawnPhase = 5;
+      for (var i = 12; i--; i>0){
+        enemies.push(new enemy(12, 6.5, 68));
+      }
+    }
+    if (survived >= 70 && spawnPhase === 5){
+      spawnPhase = 6;
+      for (var i = 10; i--; i>0){
+        enemies.push(new enemy(22, 7.7, 78));
+      }
+    }
+    if (survived >= 100 && spawnPhase === 6){
+      spawnPhase = 7;
+      for (var i = 12; i--; i>0){
+        enemies.push(new enemy(18, 8.5, 124));
+      }
+    }
+    if (survived >= 110 && spawnPhase === 7){
+      spawnPhase = 8;
+      for (var i = 8; i--; i>0){
+        enemies.push(new enemy(14, 6.5, 124));
+      }
+    }
+    if (survived >= 117 && spawnPhase === 8){
+      spawnPhase = 9;
+      for (var i = 6; i--; i>0){
+        enemies.push(new enemy(22, 5.5, 124));
+      }
+    }
+    
+  }
+
   if (survived > 125){
     cs = 3;
   }
@@ -770,7 +924,7 @@ function display(){
 
   survived = Math.round(time/1000);
 
-  if (mode !== "Extreme" && mode !== "Extreme Hard" && mode !== "Extreme Insane"){
+  if (mode !== "Extreme" && mode !== "Extreme Hard" && mode !== "Extreme Insane" && mode !== "Extreme Unreal"){
   textFont(50);
   ctx.fillStyle = "rgba(0, 0, 0, 0.15)"
   ctx.fillText("Life: "+Math.round(life), 800, 600)
@@ -819,19 +973,19 @@ function gameover(){
   }
 
   ctx.fillStyle = "rgb(0, 0, 0)";
-  ctx.fillRect(650+5, 650+5, 300, 100)
+  ctx.fillRect(650+5, 750+5, 300, 100)
   ctx.fillStyle = "rgb(0, 50, 50)";
-  if (mouseX < 650 || mouseY < 650 || mouseX > 650+300 || mouseY > 650+100){
-  ctx.fillRect(650-5, 650-5, 300, 100)
+  if (mouseX < 650 || mouseY < 750 || mouseX > 650+300 || mouseY > 750+100){
+  ctx.fillRect(650-5, 750-5, 300, 100)
     ctx.fillStyle = "rgb(250, 0, 0)";
   textFont(80);
-  ctx.fillText("Home", 800, 720)
+  ctx.fillText("Home", 800, 820)
   }
   else{
-  ctx.fillRect(650, 650, 300, 100)
+  ctx.fillRect(650, 750, 300, 100)
     ctx.fillStyle = "rgb(250, 0, 0)";
   textFont(80);
-  ctx.fillText("Home", 805, 725)
+  ctx.fillText("Home", 805, 825)
   if (clicked === true){
     cs = 1;
     enemies = [new sniper(50, 50, 30), new sniper(1600-50, 900-50, 30), new sniper(50, 900-50, 30), new sniper(1600-50, 50, 30)];
@@ -844,7 +998,7 @@ function gameover(){
     spawnPhaseTime = 0;
   }
   }
-  if (mode !== "Practice" && mode !== "Practice Hard" && mode !== "Practice Insane"){
+  if (mode !== "Practice" && mode !== "Practice Hard" && mode !== "Practice Insane" && mode !== "Practice Unreal"){
   if (survived <= 125 || mode === "Infinite" || mode === "Infinite Easy" || mode === "Infinite Hard"){
   ctx.fillStyle = "rgb(100, 20, 20)"
   textFont(150);
@@ -862,7 +1016,7 @@ function gameover(){
   textFont(120);
   ctx.fillText("Mode: "+mode, 800, 570);
   ctx.fillStyle = "rgb(100, 20, 20)"
-  if (mode === "Normal" || mode === "Normal Hard" || mode === "Normal Insane"){
+  if (mode === "Normal" || mode === "Normal Hard" || mode === "Normal Insane" || mode == "Normal Unreal"){
   textFont(30);
   ctx.fillText("Life Left: "+life, 800, 860);
   }
