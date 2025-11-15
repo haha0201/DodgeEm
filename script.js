@@ -786,6 +786,7 @@ function display(){
   ctx.fill();
 
   for (var i of enemies){
+    ctx.lineWidth = 2
     i.draw();
   }
   ctx.fill();
