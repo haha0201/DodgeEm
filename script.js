@@ -575,20 +575,20 @@ if (survived > 105 && spawnPhaseBruh === 6){
   }
 if (survived > 110 && spawnPhaseBruh === 7){
     spawnPhaseBruh = 8;
-    for(var i = 12; i--; i>0){
-    enemies.push(new enemy(30, 9, 125));
+    for(var i = 10; i--; i>0){
+    enemies.push(new enemy(30, 8.5, 125));
     }
   }
 if (survived > 115 && spawnPhaseBruh === 8){
     spawnPhaseBruh = 9;
-    for(var i = 10; i--; i>0){
-    enemies.push(new enemy(25, 13, 125));
+    for(var i = 8; i--; i>0){
+    enemies.push(new enemy(25, 6, 125));
     }
   }
   if (survived > 123 && spawnPhaseBruh === 9){
     spawnPhaseBruh = 10;
-    for(var i = 35; i--; i>0){
-    enemies.push(new enemy(25, 13, 69));
+    for(var i = 12; i--; i>0){
+    enemies.push(new enemy(25, 7, 69));
     }
   }
   }
@@ -638,38 +638,38 @@ if (survived > 115 && spawnPhaseBruh === 8){
   }
   if (survived >= 100 && spawnPhase === 7){
     spawnPhase = 8;
-    for (var i = 60; i--; i>0){
-    enemies.push(new enemy(20, 5, 125));
+    for (var i = 40; i--; i>0){
+    enemies.push(new enemy(20, 6, 125));
     }
   }
   if (survived >= 105 && spawnPhase === 8){
     spawnPhase = 9;
-    for (var i = 15; i--; i>0){
-    enemies.push(new enemy(20, 5, 125));
+    for (var i = 8; i--; i>0){
+    enemies.push(new enemy(16, 5, 125));
     }
   }
   if (survived >= 110 && spawnPhase === 9){
     spawnPhase = 10;
-    for (var i = 7; i--; i>0){
-    enemies.push(new enemy(20, 3, 125));
+    for (var i = 5; i--; i>0){
+    enemies.push(new enemy(12, 3, 125));
     }
   }
   if (survived >= 115 && spawnPhase === 10){
     spawnPhase = 11;
-    for (var i = 5; i--; i>0){
-    enemies.push(new enemy(20, 2, 125));
+    for (var i = 4; i--; i>0){
+    enemies.push(new enemy(24, 2, 125));
     }
   }
   if (survived >= 118 && spawnPhase === 11){
     spawnPhase = 12;
-    for (var i = 4; i--; i>0){
-    enemies.push(new enemy(20, 4, 125));
+    for (var i = 6; i--; i>0){
+    enemies.push(new enemy(20, 5, 125));
     }
   }
   if (survived >= 121 && spawnPhase === 12){
     spawnPhase = 13;
-    for (var i = 20; i--; i>0){
-    enemies.push(new enemy(20, 10, 125));
+    for (var i = 6; i--; i>0){
+    enemies.push(new enemy(20, 6, 125));
     }
   }
   
@@ -677,32 +677,32 @@ if (survived > 115 && spawnPhaseBruh === 8){
   else{
     if (survived >= 10 && spawnPhase === 0){
       spawnPhase = 1;
-      for (var i = 10; i--; i>0){
-        enemies.push(new enemy(20, 9, 19));
+      for (var i = 12; i--; i>0){
+        enemies.push(new enemy(20, 5, 19));
       }
     }
     if (survived >= 12 && spawnPhase === 1){
       spawnPhase = 2;
-      for (var i = 10; i--; i>0){
-        enemies.push(new enemy(15, 10, 19));
+      for (var i = 12; i--; i>0){
+        enemies.push(new enemy(17, 6, 19));
       }
     }
     if (survived >= 14 && spawnPhase === 2){
       spawnPhase = 3;
-      for (var i = 10; i--; i>0){
-        enemies.push(new enemy(10, 11, 19));
+      for (var i = 12; i--; i>0){
+        enemies.push(new enemy(14, 7, 19));
       }
     }
     if (survived >= 54 && spawnPhase === 3){
       spawnPhase = 4;
-      for (var i = 40; i--; i>0){
-        enemies.push(new enemy(20, 5, 69));
+      for (var i = 32; i--; i>0){
+        enemies.push(new enemy(15, 5.5, 69));
       }
     }
     if (survived >= 90 && spawnPhase === 4){
       spawnPhase = 5;
       for (var i = 9; i--; i>0){
-        enemies.push(new enemy(20, 11, 100));
+        enemies.push(new enemy(20, 8, 100));
       }
     }
     if (survived >= 100 && spawnPhase === 5){
@@ -720,19 +720,19 @@ if (survived > 115 && spawnPhaseBruh === 8){
     if (survived >= 115 && spawnPhase === 7){
       spawnPhase = 8;
       for (var i = 12; i--; i>0){
-        enemies.push(new enemy(30, 15, 126));
+        enemies.push(new enemy(30, 11, 126));
       }
     }
     if (survived >= 120 && spawnPhase === 8){
       spawnPhase = 9;
       for (var i = 10; i--; i>0){
-        enemies.push(new enemy(40, 15, 126));
+        enemies.push(new enemy(40, 13, 126));
       }
     }
     if (survived >= 121 && spawnPhase === 9){
       spawnPhase = 10;
       for (var i = 10; i--; i>0){
-        enemies.push(new enemy(50, 22, 126));
+        enemies.push(new enemy(50, 15, 126));
       }
     }
     
